@@ -25,43 +25,61 @@ export default function(){
             <div>
                 <img src={contactpageImg} className="contactPageImg"></img>
 
-                <div className="contactFormContainer">
-                    <div className="contactFormHeader">Contact Us</div>
+                <div className="contactFormContainerText">
+                    <div className="heading">Contact Us</div>
                     <div>
                     <form onSubmit={handleSubmit}>
-                        <label>First Name*
-                            <input 
-                            type="text" 
-                            value={firstName}
-                            placeholder="Enter first name"
-                            onChange={(e) => setfirstName(e.target.value)}
-                            />
-                        </label>
-                        <label>Last Name*
-                            <input 
-                            type="text" 
-                            value={lastName}
-                            placeholder="Enter last name"
-                            onChange={(e) => setlastName(e.target.value)}
-                            />
-                        </label>
-                        <label>Email*
-                            <input 
-                            type="email" 
-                            value={email}
-                            placeholder="Enter Email"
-                            onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </label>
-                        <label>Phone Number*
-                            <input 
-                            type="number" 
-                            value={phoneNumber}
-                            placeholder="Enter phone number"
-                            onChange={(e) => setPhoneNumber(e.target.value)}
-                            />
-                        </label>
-
+                        <div>
+                            <label>First Name*
+                                <input 
+                                type="text" 
+                                value={firstName}
+                                placeholder="Enter first name"
+                                onChange={(e) => setfirstName(e.target.value)}
+                                />
+                            </label>
+                            <label>Last Name*
+                                <input 
+                                type="text" 
+                                value={lastName}
+                                placeholder="Enter last name"
+                                onChange={(e) => setlastName(e.target.value)}
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label>Email*
+                                <input 
+                                type="email" 
+                                value={email}
+                                placeholder="Enter Email"
+                                onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label>Phone Number*
+                                <input 
+                                type="number" 
+                                value={phoneNumber}
+                                placeholder="Enter phone number"
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                />
+                            </label>
+                        </div>
+                        <div>
+                            <label class="container">Workshop 1
+                                <input type="radio" name="radio"/>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="container">Workshop 2
+                                <input type="radio" name="radio"/>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        
                         <button type="submit">Submit</button>
                     </form>
                     </div>
