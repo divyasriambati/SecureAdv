@@ -24,7 +24,7 @@ export default function Home(){
             {/* section2 */}
             <div className="homePageSection2">
                 <div className="contentContainer">
-                    <div className="heading">Our Mission and Vision</div>
+                    <div className="HomePageHeading">Our Mission and Vision</div>
                     <div className="content">Our mission is to be the trusted partner for our clients' financial success.
                     We achieve this by putting our clients first, building lasting relationships based on trust and integrity,
                     empowering our clients through education and market-focused solutions, and delivering practical and applicable

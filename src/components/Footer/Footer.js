@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './Footer.css';
+import { Outlet, Link } from "react-router-dom";
 import calender from '../../assets/SecureAdvCalendarLogo.png';
 import clock from '../../assets/SecureAdvClockLogo.png';
 import fb from '../../assets/SecureAdvFbLogo.png';
@@ -26,10 +27,10 @@ export default function Footer(){
             </div>
             <div className="footerSection2">
                 <div className="footerHeader">QUICK LINKS</div>
-                <a className="footerLinks">Home</a>
-                <a className="footerLinks">Services</a>
-                <a className="footerLinks">Website</a>
-                <a className="footerLinks">Contact Us</a>
+                <a className="footerLinks"><Link className='footerLink' to="/">Home</Link></a>
+                <a className="footerLinks"><Link className='footerLink' to="/services">Services</Link></a>
+                <a className="footerLinks"><Link className='footerLink' to="/workshop">Website</Link></a>
+                <a className="footerLinks"><Link className='footerLink' to="/contact">Contact Us</Link></a>
             </div>
             <div className="footerSection3">
                 <div className="footerHeader">CONTACT US</div>

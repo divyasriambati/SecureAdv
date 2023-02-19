@@ -25,7 +25,7 @@ export default function(){
                     <div className="contactPageContent">Plan and secure your financial future by investing less than 15 hours of your time on this pragmatic, market agnostic, retail investor friendly workshop. </div>
                     <div className="workshopPrice">Get started for just $395</div>
                     <div>
-                        <button className="primaryBtn"><Link className='Btn' to="/contact">Contact Us</Link></button>
+                        <button className="primaryBtn">Register Now</button>
                     </div>
                 </div>
                 <div className="section1col2">
