@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import './Workshop.css';
 import workshopImg from '../../assets/OptionTrading&InvestmentImg.png';
@@ -6,6 +7,15 @@ import highlightCheckbox from '../../assets/Investment vehicles workhop highligh
 import clock from '../../assets/Workshoptimingsclock.png';
 
 export default function(){
+    const [firstName, setfirstName] = useState("");
+    const [lastName, setlastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(firstName,lastName,email,phoneNumber)
+  }
     return(
         <div>
             {/* section 1 */}
@@ -67,6 +77,77 @@ export default function(){
                 </div>
             </div>
 
-        </div>
+            {/* section 4 */}
+
+            <div className="registerFormContainer">
+                    <div className="registerFormheading">Register Here</div>
+                    <div className="registerForm">
+                    <form onSubmit={handleSubmit} >
+                        <div className="registerFormUsername">
+                            <label className="registerFormlabel">First Name*
+                                <div className="registerFormInput">
+                                <input 
+                                type="text" 
+                                value={firstName}
+                                placeholder="Enter first name"
+                                onChange={(e) => setfirstName(e.target.value)}
+                                />
+                                </div>
+                            </label>
+                            <label className="registerFormlabel">Last Name*
+                                <div>
+                                <input 
+                                type="text" 
+                                value={lastName}
+                                placeholder="Enter last name"
+                                onChange={(e) => setlastName(e.target.value)}
+                                />
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <label className="registerFormlabel">Email*
+                                <div>
+                                <input 
+                                type="email" 
+                                value={email}
+                                placeholder="Enter Email"
+                                onChange={(e) => setEmail(e.target.value)}
+                                />
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <label className="registerFormlabel">Phone Number*
+                                <div>
+                                <input 
+                                type="number" 
+                                value={phoneNumber}
+                                placeholder="Enter phone number"
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                />
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="container">Workshop 1
+                                <input type="radio" name="radio"/>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="container">Workshop 2
+                                <input type="radio" name="radio"/>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" className="registerBtn">Next</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+        
     );
 }
