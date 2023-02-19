@@ -19,6 +19,7 @@ export default function () {
     const [isValidEmail, setIsValidEmail] = useState(1);
     const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(1);
     const [isValidWorkshop, setIsValidWorkshop] = useState(1);
+    
     var handleFirstNameChange = (e) => {
         // setIsValidFirstName(1);
         setfirstName(e.target.value);

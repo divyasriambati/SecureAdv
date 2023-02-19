@@ -1,31 +1,118 @@
-import React, { Component } from "react";
-import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
-import './Workshop.css';
-import workshopImg from '../../assets/OptionTrading&InvestmentImg.png';
-import highlightCheckbox from '../../assets/Investment vehicles workhop highlights.png';
-import clock from '../../assets/Workshoptimingsclock.png';
+import React, { useState } from "react";
+import highlightCheckbox from "../../assets/Investment vehicles workhop highlights.png";
+import workshopImg from "../../assets/OptionTrading&InvestmentImg.png";
+import clock from "../../assets/Workshoptimingsclock.png";
+import "./Workshop.css";
 
-export default function(){
+export default function () {
     const [firstName, setfirstName] = useState("");
     const [lastName, setlastName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [workshopName, setWorkshopName] = useState("");
+    const [isValidFirstName, setIsValidFirstName] = useState(1);
+    const [isValidSecondName, setIsValidSecondName] = useState(1);
+    const [isEmailEmpty, setIsEmailEmpty] = useState(1);
+    const [isValidEmail, setIsValidEmail] = useState(1);
+    const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(1);
+    const [isValidWorkshop, setIsValidWorkshop] = useState(1);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(firstName,lastName,email,phoneNumber)
-  }
-    return(
+    var handleFirstNameChange = (e) => {
+        // setIsValidFirstName(1);
+        setfirstName(e.target.value);
+        if (firstName.length > 0) {
+            setIsValidFirstName(1);
+        }
+    };
+    var handleLastNameChange = (e) => {
+        setlastName(e.target.value);
+        if (lastName.length > 0) {
+            setIsValidSecondName(1);
+        }
+    };
+    var handleEmailChange = (e) => {
+        setIsValidEmail(0);
+        if (email.length > 0) {
+            setIsEmailEmpty(1);
+        }
+        setEmail(e.target.value);
+        if (
+            email.match(
+                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )
+        ) {
+            setIsValidEmail(1);
+        }
+    };
+    var handlePhoneNumberChange = (e) => {
+        setPhoneNumber(e.target.value);
+        if (phoneNumber.length == 10) {
+            setIsValidPhoneNumber(1);
+        }
+    };
+
+    var handleWorkshopChange = (e) => {
+        setWorkshopName(e.target.value);
+        if (workshopName.length > 0) {
+            setIsValidSecondName(1);
+        }
+        console.log(e.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        if (firstName.length > 0) {
+            setIsValidFirstName(1);
+        } else {
+            setIsValidFirstName(0);
+        }
+        if (lastName.length > 0) {
+            setIsValidSecondName(1);
+        } else {
+            setIsValidSecondName(0);
+        }
+        if (email.length > 0) {
+            setIsEmailEmpty(1);
+        } else {
+            setIsEmailEmpty(0);
+        }
+        if (phoneNumber.length == 10) {
+            setIsValidPhoneNumber(1);
+        } else {
+            setIsValidPhoneNumber(0);
+        }
+
+        if (workshopName.length > 0) {
+            setIsValidWorkshop(1);
+        } else {
+            setIsValidWorkshop(0);
+        }
+        event.preventDefault();
+
+        console.log(firstName, lastName, email, phoneNumber);
+    };
+
+    return (
         <div>
             {/* section 1 */}
             <div className="contactPageSection1Container">
                 <div className="Section1Col1">
-                    <div className="contactPageHeader1">Investment Vehicles Workshop</div>
-                    <div className="contactPageContent">Plan and secure your financial future by investing less than 15 hours of your time on this pragmatic, market agnostic, retail investor friendly workshop. </div>
-                    <div className="workshopPrice">Get started for just $395</div>
+                    <div className="contactPageHeader1">
+                        Investment Vehicles Workshop
+                    </div>
+                    <div className="contactPageContent">
+                        Plan and secure your financial future by investing less
+                        than 15 hours of your time on this pragmatic, market
+                        agnostic, retail investor friendly workshop.{" "}
+                    </div>
+                    <div className="workshopPrice">
+                        Get started for just $395
+                    </div>
                     <div>
-                        <button className="primaryBtn"><Link className='Btn' to="/contact">Contact Us</Link></button>
+                        <button className="primaryBtn">
+                            <a className="Btn" href="#register-section">
+                                Register Now
+                            </a>
+                        </button>
                     </div>
                 </div>
                 <div className="section1col2">
@@ -37,12 +124,49 @@ export default function(){
             <div className="contactPageSection2">
                 <div className="contactPageHeader2"> Workshop Highlights</div>
                 <div className="workshopHighlightsCard">
-                    <div className="workshopHighlights"><img src={highlightCheckbox}></img><span className="highlightsContent">Bring you from zero to hundred in option trading concepts and how they can be applied in the markets</span></div>
-                    <div className="workshopHighlights"><img src={highlightCheckbox}></img><span className="highlightsContent">Take home time tested home grown indicators which work both in bull & bear markets</span></div>
-                    <div className="workshopHighlights"><img src={highlightCheckbox}></img><span className="highlightsContent">Live trading roadshows where you will work with our experts</span></div>
-                    <div className="workshopHighlights"><img src={highlightCheckbox}></img><span className="highlightsContent">Learn portfolio and risk management from experts who have extensive experience building large portfolios</span></div>
-                    <div className="workshopHighlights"><img src={highlightCheckbox}></img><span className="highlightsContent">Learn about investment vehicles like IULs, Annuities , IRAs and a host of other products</span></div>
-                    <div className="workshopHighlights"><img src={highlightCheckbox}></img><span className="highlightsContent">Work with our licensed financials professionals to design and implement the right investment vehicle which helps you meet your financial goals</span></div>
+                    <div className="workshopHighlights">
+                        <img src={highlightCheckbox}></img>
+                        <span className="highlightsContent">
+                            Bring you from zero to hundred in option trading
+                            concepts and how they can be applied in the markets
+                        </span>
+                    </div>
+                    <div className="workshopHighlights">
+                        <img src={highlightCheckbox}></img>
+                        <span className="highlightsContent">
+                            Take home time tested home grown indicators which
+                            work both in bull & bear markets
+                        </span>
+                    </div>
+                    <div className="workshopHighlights">
+                        <img src={highlightCheckbox}></img>
+                        <span className="highlightsContent">
+                            Live trading roadshows where you will work with our
+                            experts
+                        </span>
+                    </div>
+                    <div className="workshopHighlights">
+                        <img src={highlightCheckbox}></img>
+                        <span className="highlightsContent">
+                            Learn portfolio and risk management from experts who
+                            have extensive experience building large portfolios
+                        </span>
+                    </div>
+                    <div className="workshopHighlights">
+                        <img src={highlightCheckbox}></img>
+                        <span className="highlightsContent">
+                            Learn about investment vehicles like IULs, Annuities
+                            , IRAs and a host of other products
+                        </span>
+                    </div>
+                    <div className="workshopHighlights">
+                        <img src={highlightCheckbox}></img>
+                        <span className="highlightsContent">
+                            Work with our licensed financials professionals to
+                            design and implement the right investment vehicle
+                            which helps you meet your financial goals
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -52,102 +176,193 @@ export default function(){
                 <div className="workshopOverviewCardsSection">
                     <div className="workshopOverviewCard1">
                         <button className="workshopOverviewsteps">1</button>
-                        <div className="workshopOverviewHeader">Expertise on concepts</div>
-                        <div className="workshopOverviewContent">Learn options , charting and account management concepts.</div>
-                        <div className="timingSection"><img src={clock}></img><span className="WorkshopOverviewTimings">3:00 Hours</span></div>
+                        <div className="workshopOverviewHeader">
+                            Expertise on concepts
+                        </div>
+                        <div className="workshopOverviewContent">
+                            Learn options , charting and account management
+                            concepts.
+                        </div>
+                        <div className="timingSection">
+                            <img src={clock}></img>
+                            <span className="WorkshopOverviewTimings">
+                                3:00 Hours
+                            </span>
+                        </div>
                     </div>
                     <div className="workshopOverviewCard1">
                         <button className="workshopOverviewsteps">2</button>
-                        <div className="workshopOverviewHeader">Live trading roadshow</div>
-                        <div className="workshopOverviewContent">Set up paper accounts, and trade live with the experts in real market conditions</div>
-                        <div className="timingSection"><img src={clock}></img><span className="WorkshopOverviewTimings">3:00 Hours</span></div>
+                        <div className="workshopOverviewHeader">
+                            Live trading roadshow
+                        </div>
+                        <div className="workshopOverviewContent">
+                            Set up paper accounts, and trade live with the
+                            experts in real market conditions
+                        </div>
+                        <div className="timingSection">
+                            <img src={clock}></img>
+                            <span className="WorkshopOverviewTimings">
+                                3:00 Hours
+                            </span>
+                        </div>
                     </div>
                     <div className="workshopOverviewCard1">
                         <button className="workshopOverviewsteps">3</button>
-                        <div className="workshopOverviewHeader">Investment vehicles</div>
-                        <div className="workshopOverviewContent">Understand different investment vehicles to secure your short team and long term financial goals.</div>
-                        <div className="timingSection"><img src={clock}></img><span className="WorkshopOverviewTimings">3:00 Hours</span></div>
+                        <div className="workshopOverviewHeader">
+                            Investment vehicles
+                        </div>
+                        <div className="workshopOverviewContent">
+                            Understand different investment vehicles to secure
+                            your short team and long term financial goals.
+                        </div>
+                        <div className="timingSection">
+                            <img src={clock}></img>
+                            <span className="WorkshopOverviewTimings">
+                                3:00 Hours
+                            </span>
+                        </div>
                     </div>
                     <div className="workshopOverviewCard1">
                         <button className="workshopOverviewsteps">4</button>
-                        <div className="workshopOverviewHeader">Continued education & Implementation</div>
-                        <div className="workshopOverviewContent">Work with our industry experts to tailor the investment  vehicles for your needs. Create passive streams of income by participating in  option trading . Life long alerts available from outr experts </div>
-                        <div className="timingSection"><img src={clock}></img><span className="WorkshopOverviewTimings">4:00 Hours</span></div>
+                        <div className="workshopOverviewHeader">
+                            Continued education & Implementation
+                        </div>
+                        <div className="workshopOverviewContent">
+                            Work with our industry experts to tailor the
+                            investment vehicles for your needs. Create passive
+                            streams of income by participating in option trading
+                            . Life long alerts available from outr experts{" "}
+                        </div>
+                        <div className="timingSection">
+                            <img src={clock}></img>
+                            <span className="WorkshopOverviewTimings">
+                                4:00 Hours
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* section 4 */}
 
-            <div className="registerFormContainer">
-                    <div className="registerFormheading">Register Here</div>
-                    <div className="registerForm">
-                    <form onSubmit={handleSubmit} >
+            <div className="registerFormContainer" id="register-section">
+                <div className="registerFormheading">Register Here</div>
+                <div className="registerForm">
+                    <form onSubmit={handleSubmit}>
                         <div className="registerFormUsername">
-                            <label className="registerFormlabel">First Name*
+                            <label className="registerFormlabel">
+                                First Name*
                                 <div className="registerFormInput">
-                                <input 
-                                type="text" 
-                                value={firstName}
-                                placeholder="Enter first name"
-                                onChange={(e) => setfirstName(e.target.value)}
-                                />
+                                    <input
+                                        type="text"
+                                        value={firstName}
+                                        placeholder="Enter first name"
+                                        onChange={handleFirstNameChange}
+                                    />
+                                    {firstName == "" &&
+                                    isValidFirstName == 0 ? (
+                                        <p>Please enter valid first name</p>
+                                    ) : (
+                                        ""
+                                    )}
                                 </div>
                             </label>
-                            <label className="registerFormlabel">Last Name*
+                            <label className="registerFormlabel">
+                                Last Name*
                                 <div>
-                                <input 
-                                type="text" 
-                                value={lastName}
-                                placeholder="Enter last name"
-                                onChange={(e) => setlastName(e.target.value)}
-                                />
+                                    <input
+                                        type="text"
+                                        value={lastName}
+                                        placeholder="Enter last name"
+                                        onChange={handleLastNameChange}
+                                    />
+                                    {lastName == "" &&
+                                    isValidSecondName == 0 ? (
+                                        <p>Please enter valid second name</p>
+                                    ) : (
+                                        ""
+                                    )}
                                 </div>
                             </label>
                         </div>
                         <div>
-                            <label className="registerFormlabel">Email*
+                            <label className="registerFormlabel">
+                                Email*
                                 <div>
-                                <input 
-                                type="email" 
-                                value={email}
-                                placeholder="Enter Email"
-                                onChange={(e) => setEmail(e.target.value)}
-                                />
+                                    <input
+                                        type="email"
+                                        value={email}
+                                        placeholder="Enter Email"
+                                        onChange={handleEmailChange}
+                                    />
+                                    {email == "" && isEmailEmpty == 0 ? (
+                                        <p>Please fill out this feild</p>
+                                    ) : (
+                                        ""
+                                    )}
+                                    {email != "" && isValidEmail == 0 ? (
+                                        <p>Please enter valid email</p>
+                                    ) : (
+                                        ""
+                                    )}
                                 </div>
                             </label>
                         </div>
                         <div>
-                            <label className="registerFormlabel">Phone Number*
+                            <label className="registerFormlabel">
+                                Phone Number*
                                 <div>
-                                <input 
-                                type="number" 
-                                value={phoneNumber}
-                                placeholder="Enter phone number"
-                                onChange={(e) => setPhoneNumber(e.target.value)}
-                                />
+                                    <input
+                                        type="number"
+                                        value={phoneNumber}
+                                        placeholder="Enter phone number"
+                                        onChange={handlePhoneNumberChange}
+                                    />
+                                    {phoneNumber == "" &&
+                                    isValidPhoneNumber == 0 ? (
+                                        <p>Please fill out this feild</p>
+                                    ) : (
+                                        ""
+                                    )}
                                 </div>
                             </label>
                         </div>
                         <div>
-                            <label class="container">Workshop 1
-                                <input type="radio" name="radio"/>
+                            <label class="container">
+                                Workshop 1
+                                <input
+                                    type="radio"
+                                    name="radio"
+                                    value="workshop1"
+                                    onChange={handleWorkshopChange}
+                                />
                                 <span class="checkmark"></span>
                             </label>
                         </div>
                         <div>
-                            <label class="container">Workshop 2
-                                <input type="radio" name="radio"/>
+                            <label class="container">
+                                Workshop 2
+                                <input
+                                    type="radio"
+                                    name="radio"
+                                    value="workshop2"
+                                    onChange={handleWorkshopChange}
+                                />
                                 <span class="checkmark"></span>
                             </label>
                         </div>
-                        
-                        <button type="submit" className="registerBtn">Next</button>
+                        {workshopName == "" && isValidWorkshop == 0 ? (
+                            <p>Choose any one of the above Workshops</p>
+                        ) : (
+                            ""
+                        )}
+
+                        <button type="submit" className="registerBtn">
+                            Next
+                        </button>
                     </form>
-                    </div>
                 </div>
             </div>
-
-        
+        </div>
     );
 }
