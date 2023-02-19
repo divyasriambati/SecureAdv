@@ -1,0 +1,60 @@
+.navbarContainer{
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+.navbarBrand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo{
+    height: 45px;
+    width: 45px;
+}
+.brandFirstPart{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Bold";
+    color: black;
+}
+.brandSecondPart{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Bold";
+    color: #01996D;
+    margin-left: -5px;
+}
+.navsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav{
+    font-size: 15px;
+    font-weight: 500;
+    font-family:"Medium";
+    margin: 0px 20px;
+}
+.navlink{
+    text-decoration: none !important;
+    color: black;
+}
+.workshopBtn{
+    border: none;
+    background-color: #01996D;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Medium";
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.Btn{
+    text-decoration: none !important;
+    color: white;
+}

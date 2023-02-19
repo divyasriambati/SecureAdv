@@ -1,0 +1,155 @@
+.servicesSection1Container{
+    background-color: #F4F6F5;
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+.Section1Col1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+.servicesHeader1{
+    font-size: 40px;
+    font-family: "Bold";
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.servicesList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.servicesCheckbox{
+    height: auto;
+    width: auto;
+    margin-right: 15px;
+}
+.secureAdvServices{
+    font-size: 16px;
+    font-family: "Medium";
+    font-weight: 500;
+}
+.section1col2{
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.servicesGrowthImg{
+    height: auto;
+    width: auto;
+}
+.primaryBtn{
+    border: none;
+    background-color: #01996D;
+    color: white;
+    font-size: 18px;
+    font-family: "SemiBold";
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.homePageSection3{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px ;
+    padding-bottom: 60px;
+}
+.header{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Bold";
+    color: #01996D;
+}
+.cardsSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+.card1Img{
+    width: auto;
+    height: 250px;
+}
+.card1{
+    width: 25%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.card1Header{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "SemiBold";
+    color: #000000;
+    margin: 15px 0px;
+}
+.card1Content{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Regular";
+    color: #000000;
+    width: 95%;
+}
+.servicesSection2Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3%;
+}
+.servicesCardsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+.serviceCard{
+    width: 25%;
+    border:1px solid #01996D;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   padding: 10px 30px;
+   margin: 30px 0px;
+}
+.servicesCardImgSection{
+    height: 300px;
+    width: auto;
+    align-items: center;
+}
+.servicesCardImg{
+    height: 300px;
+    width: auto;
+    align-items: center;
+}
+.servicesCardImg1{
+    height: 220px;
+    width: 400px;
+    align-items: center;
+    margin-top: 50px;
+}
+.serviceCardText{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "SemiBold";
+    text-align: center;
+}
+.serviceCardContent{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Regular";
+    text-align: center;
+    margin: 15px;
+}

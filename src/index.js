@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import './fonts/Poppins-Medium.ttf';
+import './fonts/Poppins-Regular.ttf';
+import './fonts/Poppins-SemiBold.ttf';
+import './fonts/Poppins-Bold.ttf';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

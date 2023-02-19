@@ -1,0 +1,94 @@
+.footerContainer{
+    background-color: #245852;
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: row;
+}
+.footerSection1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.footerSection2{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-top: 4%;
+}
+.footerSection3{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-top: 4%;
+}
+.brandFirstpart{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Bold";
+    color: white;
+}
+.brandSecondpart{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Bold";
+    color: #0CF3B0;
+}
+.footerSubHeader{
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Regular";
+    color: white;
+    margin: 15px 0px;
+    opacity: 0.8;
+}
+.footerHeader{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Medium";
+    color: white;
+    margin-bottom: 15px;
+}
+.footerIcons{
+    height: auto;
+    width: auto;
+    margin-right: 10px;
+}
+.footerContent{
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Regular";
+    color: white;
+    opacity: 0.8;
+  
+}
+.footerInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.footerSocialLinksContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+.footerSocialIcons{
+    margin-right: 15px;
+}
+.footerContactInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+}
+.footerLinks{
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Light";
+    color: white;
+    opacity: 0.8;
+    margin: 10px 0px;
+    
+}

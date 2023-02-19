@@ -1,0 +1,141 @@
+.contactPageSection1Container{
+    background-color: #F4F6F5;
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 4% 0%;
+}
+.Section1Col1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7%;
+}
+.contactPageHeader1{
+    font-size: 30px;
+    font-family: "Bold";
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contactPageContent{
+    font-size: 16px;
+    font-family: "Regular";
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.workshopPrice{
+    font-size: 14px;
+    font-family: "Regular";
+    font-weight: 400;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+.section1col2{
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.optionTradingImg{
+    height: 30vh;
+    width: auto;
+}
+.contactPageSection2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 0%;
+}
+.contactPageHeader2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "SemiBold";
+    color: #01996D;
+    margin-bottom: 20px;
+}
+.workshopHighlightsCard{
+    border: 1px solid #01996D;
+    border-radius: 20px;
+    padding: 20px;
+    width: 40%;
+}
+.workshopHighlights{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.highlightsContent{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Regular";
+    color: #000000; 
+    margin-left: 15px;
+}
+.contactPageSection3{
+    background-color: #EBEEEB;
+    padding: 2%;
+}
+.workshopOverviewCardsSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2% 0%;
+}
+.workshopOverviewCard1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 5px 8px 10px rgb(233, 231, 231);
+    border-radius: 10px;
+    width: 20%;
+}
+.workshopOverviewsteps{
+    background-color: #01996D;
+    border-radius: 10px;
+    border: none;
+    padding: 7px 15px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "SemiBold";
+    color: white;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 5px 8px 10px rgb(233, 231, 231);
+}
+.workshopOverviewHeader{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "SemiBold";
+    margin: 10px;
+    text-align: center;
+}
+.workshopOverviewContent{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "regular";
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+    width: 70%;
+}
+.timingSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EBEBEB;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: auto;
+}
+.WorkshopOverviewTimings{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Regular";
+    margin-left: 10px;
+}
