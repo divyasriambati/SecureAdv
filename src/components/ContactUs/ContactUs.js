@@ -6,6 +6,7 @@ import locationLogo from "../../assets/SecureAdvLocationLogo (1).png";
 import "./ContactUs.css";
 
 import { useState } from "react";
+import { width } from "@mui/system";
 
 export default function () {
     const [firstName, setfirstName] = useState("");
@@ -99,25 +100,27 @@ export default function () {
 
                 <div className="contactFormContainerText">
                     <div className="heading">Contact Us</div>
-                    <div>
+                    <div  className="contactForm">
                         <form onSubmit={handleSubmit}>
-                            <div>
-                                <label>
+                            <div className="contactFormUsername">
+                                <label className="registerFormlabel">
                                     First Name*
-                                    <input
+                                   
+                                    <input style={{width:"80%"}}
                                         type="text"
                                         value={firstName}
                                         placeholder="Enter first name"
                                         onChange={handleFirstNameChange}
                                     />
+                                   
                                     {firstName == "" &&
                                     isValidFirstName == 0 ? (
-                                        <p>Please enter valid first name</p>
+                                        <p className="error">Please enter valid first name</p>
                                     ) : (
                                         ""
                                     )}
                                 </label>
-                                <label>
+                                <label className="registerFormlabel">
                                     Last Name*
                                     <input
                                         type="text"
@@ -127,14 +130,14 @@ export default function () {
                                     />
                                     {lastName == "" &&
                                     isValidSecondName == 0 ? (
-                                        <p>Please enter valid second name</p>
+                                        <p className="error">Please enter valid second name</p>
                                     ) : (
                                         ""
                                     )}
                                 </label>
                             </div>
                             <div>
-                                <label>
+                                <label className="registerFormlabel">
                                     Email*
                                     <input
                                         type="email"
@@ -143,7 +146,7 @@ export default function () {
                                         onChange={handleEmailChange}
                                     />
                                     {email == "" && isEmailEmpty == 0 ? (
-                                        <p>Please fill out this feild</p>
+                                        <p className="error">Please fill out this field</p>
                                     ) : (
                                         ""
                                     )}
@@ -155,7 +158,7 @@ export default function () {
                                 </label>
                             </div>
                             <div>
-                                <label>
+                                <label className="registerFormlabel">
                                     Phone Number*
                                     <input
                                         type="number"
@@ -166,13 +169,13 @@ export default function () {
                                     />
                                     {phoneNumber == "" &&
                                     isValidPhoneNumber == 0 ? (
-                                        <p>Please fill out this feild</p>
+                                        <p className="error">Please enter phone number</p>
                                     ) : (
                                         ""
                                     )}
                                 </label>
                             </div>
-                            <div>
+                            {/* <div>
                                 <label class="container">
                                     Workshop 1
                                     <input
@@ -200,9 +203,9 @@ export default function () {
                                 <p>Choose any one of the above Workshops</p>
                             ) : (
                                 ""
-                            )}
+                            )} */}
 
-                            <button type="submit">Submit</button>
+                            <button type="submit" className="registerBtn">Submit</button>
                         </form>
                     </div>
                 </div>
